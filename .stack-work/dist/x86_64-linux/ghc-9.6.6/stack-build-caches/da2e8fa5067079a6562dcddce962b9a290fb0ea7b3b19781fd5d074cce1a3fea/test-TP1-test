@@ -1,0 +1,22 @@
+/home/tecla/.ghcup/ghc/9.6.6/lib/ghc-9.6.6/lib/x86_64-linux-ghc-9.6.6/rts-1.0.2/include/ghcversion.h:
+  hash: 9032f6afc97dcddfe8c8b306639eb6f456e3f6667f3dd8268681f51bb77c8634
+/home/tecla/facu/ALP/TP1/.stack-work/dist/x86_64-linux/ghc-9.6.6/build/TP1-test/autogen/Paths_TP1.hs:
+  hash: e9aaae6d916b1e125d2a060a9581c6dcd6c23f7f647999460dc4ad428cb8cac7
+/home/tecla/facu/ALP/TP1/.stack-work/dist/x86_64-linux/ghc-9.6.6/build/TP1-test/autogen/cabal_macros.h:
+  hash: 7dc2187e0b3da4462dc56c86216ec88783a252628fa010074e9fba41f3e84e69
+/home/tecla/facu/ALP/TP1/CHANGELOG.md:
+  hash: 4d3313936a46bb30918048b369fb6aa8d4103afefb7b7a48ffbfb0d9806f3d6b
+/home/tecla/facu/ALP/TP1/README.md:
+  hash: 8c50b647de6f8d234b50e47ecee815c185818dff55a5323a08828dd22c247648
+/home/tecla/facu/ALP/TP1/TP1.cabal:
+  hash: f15ad80637afff84b758a1e961622e513ea5e72203ddb625d63af412671e7ac2
+/home/tecla/facu/ALP/TP1/package.yaml:
+  hash: 8f10c45f5cc8350b81b12753a629ffde2dbf8f9eb1eb715011e140e977b581d9
+/home/tecla/facu/ALP/TP1/tests/Eval1Tests.hs:
+  hash: f6f4d74b812d178f228e533080af593f05d35781cfe99289beb87d85633be968
+/home/tecla/facu/ALP/TP1/tests/Main.hs:
+  hash: 17ab41e234bc31c5d503fe81254c90b90e34453bae427379dd4208deedc52c6c
+/home/tecla/facu/ALP/TP1/tests/ParserTests.hs:
+  hash: 476668fd812845b92e4e03d25da11e2133ffbaf1aa1f509b863cd06f1d0e0253
+/usr/include/stdc-predef.h:
+  hash: 8db4f65e62cade8ae4d9b77960ee6aee093255acc1b637e3fb37d79179733b15

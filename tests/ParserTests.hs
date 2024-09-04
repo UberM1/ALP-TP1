@@ -17,6 +17,11 @@ okTest filePath cont msg expected =
 testSkip :: FilePath -> String -> Test
 testSkip filePath cont = okTest filePath cont "Error on skip" (Right Skip)
 
+testmini :: FilePath -> String -> Test
+testmini filePath cont = okTest filePath cont "Error on mini test" (Right prog)
+  where
+    prog = Seq (Let "n" (Const 25)) (Let "x" (Const 44))
+
 testSqrt :: FilePath -> String -> Test
 testSqrt filePath cont = okTest filePath cont msg (Right prog)
   where
@@ -26,6 +31,7 @@ testSqrt filePath cont = okTest filePath cont msg (Right prog)
                (RepeatUntil (Seq (Let "i" (Plus (Var "i") (Const 1))) (Let "t" (Times (Var "i") (Var "i")))) 
                             (Or (Gt (Var "t") (Var "n")) (Eq (Var "t") (Var "n"))))
 
+
 -- | Tests cases
 
 tests :: [(FilePath -> String -> Test, FilePath)]
@@ -33,6 +39,7 @@ tests =
     [
       (testSkip, "ejemplos/skip.lis")
     , (testSqrt, "ejemplos/sqrt.lis")
+    , (testmini, "ejemplos/mini.lis")
     ]
 
 -- | Run tests

@@ -14,19 +14,19 @@ data Exp a where
   Minus  :: Exp Int -> Exp Int -> Exp Int
   Times  :: Exp Int -> Exp Int -> Exp Int
   Div    :: Exp Int -> Exp Int -> Exp Int
-  VarInt :: Exp Int -> Exp Int
-  VarDec :: Exp Int -> Exp Int
+  VarInc :: Variable -> Exp Int
+  VarDec :: Variable -> Exp Int
 
   -- Expresiones booleanas
   BTrue  :: Exp Bool
   BFalse :: Exp Bool
   Lt     :: Exp Int -> Exp Int -> Exp Bool
   Gt     :: Exp Int -> Exp Int -> Exp Bool
+  Eq     :: Exp Int -> Exp Int -> Exp Bool
+  NEq    :: Exp Int -> Exp Int -> Exp Bool  
   And    :: Exp Bool -> Exp Bool -> Exp Bool
   Or     :: Exp Bool -> Exp Bool -> Exp Bool
   Not    :: Exp Bool -> Exp Bool
-  Eq     :: Exp Int -> Exp Int -> Exp Bool
-  NEq    :: Exp Int -> Exp Int -> Exp Bool  
 
 deriving instance Show (Exp a)
 deriving instance Eq (Exp a)

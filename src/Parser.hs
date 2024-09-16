@@ -47,7 +47,7 @@ lis = makeTokenParser
 --- Parser de expresiones enteras
 -----------------------------------
 intexp :: Parser (Exp Int)
-intexp = chainl1 subterm plusminus <|> parens lis (chainl1 subterm plusminus)
+intexp = chainl1 subterm plusminus 
 
 cons :: Parser (Exp Int)
 cons = do i <- integer lis
@@ -77,7 +77,7 @@ unitParser = do reservedOp lis "-"
                 return (UMinus e)
 
 subterm :: Parser (Exp Int)
-subterm = chainl1 (unitParser <|> cons <|> varparser) timesdiv
+subterm = chainl1 (parens lis intexp <|> unitParser <|> cons <|> varparser) timesdiv
 
 ------------------------------------
 --- Parser de expresiones booleanas

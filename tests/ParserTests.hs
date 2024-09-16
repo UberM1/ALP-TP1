@@ -20,7 +20,7 @@ testSkip filePath cont = okTest filePath cont "Error on skip" (Right Skip)
 testmini :: FilePath -> String -> Test
 testmini filePath cont = okTest filePath cont "Error on mini test" (Right prog)
   where
-    prog = Seq (Let "n" (Const 25)) (Let "x" (Const 44))
+    prog = Seq (Let "n" (Plus (Const 30) (Const 25))) (Let "x" (Const 44))
 
 testSqrt :: FilePath -> String -> Test
 testSqrt filePath cont = okTest filePath cont msg (Right prog)

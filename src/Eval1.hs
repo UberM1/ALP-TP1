@@ -61,10 +61,12 @@ evalExp (Plus e0 e1) s = evalOp e0 e1 s (+)
 evalExp (Minus e0 e1) s = evalOp e0 e1 s (-)
 evalExp (Times e0 e1) s = evalOp e0 e1 s (*)
 evalExp (Div e0 e1) s = evalOp e0 e1 s div
+evalExp (VarInc x) s = 1 + lookfor x s :!: s
+evalExp (VarDec x) s = lookfor x s - 1 :!: s
 evalExp BTrue s = True :!: s
 evalExp BFalse s = False :!: s
 evalExp (Not p) s = let b :!: s' = evalExp p s
-                    in (not b ) :!: s'
+                    in (not b) :!: s'
 evalExp (Or p0 p1) s =  evalOp p0 p1 s (||)
 evalExp (And p0 p1) s = evalOp p0 p1 s (&&)
 evalExp (Eq e0 e1) s = evalOp e0 e1 s (==)
